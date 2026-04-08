@@ -1,7 +1,7 @@
 /*================================================================================
 	
 		*****************************************************
-		************** [Zombie Plague Mod 4.3] **************
+		************** [Zombie Plague Mod 4.4] **************
 		*****************************************************
 	
 	----------------------
@@ -365,7 +365,23 @@
 	      functionality, greatly extended API capabilities, implemented a
 	      more efficient Pain Shock Free code, reworked some menus.
 	   - Fixed pretty much all reported bugs to the date.
-	
+	* v4.4: (Apr 2026) fix by LEISER307 (https://github.com/LEISER307/Zombie-Plague-Mod-4.4/)
+	   - [CRITICAL] Weapon buy exploit fix - added g_canbuy[] variable and check to prevent weapon purchase exploit
+	   - [CRITICAL] trigger_hurt forward fix - fixed forward for trigger_hurt
+	   - Added constant MAX_PLAYERS_ZP = 33
+	   - Added zp_ prefix to avoid name conflicts with other plugins
+	   - Fixed function names zp_fm_cs_* → zp_fm_*
+	   - Fixed function names zp_cs_* → zp_*
+	   - [BUGFIX] Glow removal - added glow effect removal on disconnect
+	   - [BUGFIX] respawn_as_zombie flag - fixed flag reset on spawn block
+	   - [BUGFIX] PODBots NVG - added check for bots
+	   - [BUGFIX] Infection Bomb - added g_bitEntity validation
+	   - [BUGFIX] Zombie respawn sound - added sound on respawn
+	   - [OPTIMIZATION] WEAPONENTNAMES_SIZE - added check for RegisterHam loop
+	   - Fixed compilation errors with const for arrays
+	   - Fixed MAX_PLAYERS constant duplicates
+	   - Lang file verified - compatible
+	   - Additional plugins verified - no changes needed
 =================================================================================*/
 
 /*================================================================================
@@ -399,7 +415,7 @@ const MAX_STATS_SAVED = 64
 =================================================================================*/
 
 // Plugin Version
-#define PLUGIN_VERSION "4.3 Fix5a"
+#define PLUGIN_VERSION "4.4"
 
 // Customization file sections
 enum
@@ -955,7 +971,7 @@ public plugin_natives()
 public plugin_precache()
 {
 	// Register earlier to show up in plugins list properly after plugin disable/error at loading
-	register_plugin("Zombie Plague", PLUGIN_VERSION, "MeRcyLeZZ")
+	register_plugin("Zombie Plague", PLUGIN_VERSION, "MeRcyLeZZ \Fix by LEISER307")
 	
 	// To switch plugin on/off
 	register_concmd("zp_toggle", "cmd_toggle", _, "<1/0> - Enable/Disable Zombie Plague (will restart the current map)", 0)
