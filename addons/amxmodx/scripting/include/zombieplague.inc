@@ -280,6 +280,19 @@ native zp_respawn_user(id, team)
 native zp_force_buy_extra_item(id, itemid, ignorecost = 0)
 
 /**
+ * Overrides ZP player model with a different custom model.
+ *
+ * Note: This will last until player's next infection/humanization/respawn.
+ *
+ * Note: Don't call more often than absolutely needed.
+ *
+ * @param id		Player index.
+ * @param newmodel	Model name.
+ * @param modelindex	Modelindex (optional).
+ */
+native zp_override_user_model(id, const newmodel[], modelindex = 0)
+
+/**
  * Returns whether the ZP round has started, i.e. first zombie
  * has been chosen or a game mode has begun.
  *
@@ -394,6 +407,16 @@ native zp_get_extra_item_id(const name[])
  * @return		Internal zombie class ID, or -1 if not found.
  */
 native zp_get_zombie_class_id(const name[])
+
+/**
+ * Returns a zombie class' description (passed by reference).
+ *
+ * @param classid		Internal zombie class ID.
+ * @param info			The buffer to store the string in.
+ * @param len			Character size of the output buffer.
+ * @return			True on success, false otherwise.
+ */
+native zp_get_zombie_class_info(classid, info[], len)
 
 /**
  * Called when the ZP round starts, i.e. first zombie

@@ -83,7 +83,7 @@ new g_zclass_leech
 // Zombie Classes MUST be registered on plugin_precache
 public plugin_precache()
 {
-	register_plugin("[ZP] Default Zombie Classes", "4.3", "MeRcyLeZZ")
+	register_plugin("[ZP] Default Zombie Classes", "4.3 Fix5", "MeRcyLeZZ")
 	
 	// Register all classes
 	zp_register_zombie_class(zclass1_name, zclass1_info, zclass1_model, zclass1_clawmodel, zclass1_health, zclass1_speed, zclass1_gravity, zclass1_knockback)
@@ -97,6 +97,6 @@ public plugin_precache()
 public zp_user_infected_post(id, infector)
 {
 	// If attacker is a leech zombie, gets extra hp
-	if (zp_get_user_zombie_class(infector) == g_zclass_leech)
+	if (is_user_connected(infector) && zp_get_user_zombie_class(infector) == g_zclass_leech)
 		set_pev(infector, pev_health, float(pev(infector, pev_health) + zclass5_infecthp))
 }
