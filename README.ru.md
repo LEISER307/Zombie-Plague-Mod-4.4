@@ -1,7 +1,9 @@
 # 🧟‍♂️ Zombie Plague for Counter-Strike [![Version](https://img.shields.io/badge/version-4.4-orange)]()
 
 <div align="center">
-[English](README.en.md) | **Русский**
+
+[English](README.md) | **Русский**
+
 </div>
 
 <div align="center">
@@ -87,6 +89,22 @@
 <summary><b>Click to expand full changelog (Version 4.3 → 3.55)</b></summary>
 
 <br>
+
+> **Version: 4.4** (Apr 09, 2026)
+> * **[CRITICAL] Weapon buy exploit fix** - добавлена переменная g_canbuy[] и проверка для предотвращения эксплойта покупки оружия
+> * **[CRITICAL] trigger_hurt forward fix** - исправлен forward для trigger_hurt
+> * Добавлена константа `MAX_PLAYERS_ZP = 33`
+> * Добавлен префикс `zp_` воизбежание конфликтов имен с другими плагинами
+> * Исправлены имена функций `zp_fm_cs_*` → `zp_fm_*`
+> * Исправлены имена функций `zp_cs_*` → `zp_*`
+> * **[BUGFIX] Glow removal** - добавлено удаление glow эффекта при disconnect
+> * **[BUGFIX] respawn_as_zombie flag** - исправлен сброс флага при блокировке респавна
+> * **[BUGFIX] PODBots NVG** - добавлена проверка для ботов
+> * **[BUGFIX] Infection Bomb** - добавлена валидация g_bitEntity
+> * **[BUGFIX] Zombie respawn sound** - добавлен звук при респавне
+> * **[OPTIMIZATION] WEAPONENTNAMES_SIZE** - добавлена проверка для цикла RegisterHam
+> * Исправлены ошибки компиляции с const для массивов
+> * Исправлены дубли константы MAX_PLAYERS
 
 > **Version: 4.3 Fix 5a** (Jul 04, 2011)
 > * Fixed menus causing runtime errors
