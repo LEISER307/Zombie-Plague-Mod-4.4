@@ -86,7 +86,7 @@
 ## 📝 Changelog
 
 <details>
-<summary><b>Click to expand full changelog (Version 4.3 → 3.55)</b></summary>
+<summary><b>Click to expand full changelog (Version 4.4 → 3.55)</b></summary>
 
 <br>
 
