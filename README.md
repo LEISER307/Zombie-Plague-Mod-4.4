@@ -72,8 +72,8 @@ You can flexibly adjust the mod to fit your gameplay style:
 
 1. Download and extract the contents from the `.zip` files to your server's mod directory (`cstrike` or `czero`), **keeping the folder structure**:
 
-   - `zp_plugin_44.zip` — Contains the plugin itself and configuration files
-   - `zp_resources.zip` — Contains default models and sounds (only required for a first download)
+   - `addons` — Contains the plugin itself and configuration files
+   - `zp_resources` — Contains default models and sounds (only required for a first download)
 
 2. For further information on the plugin, including CVARs and commands, take a look at the included `ReadMe.txt` file.
 
