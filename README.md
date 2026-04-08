@@ -1,11 +1,15 @@
 # 🧟‍♂️ Zombie Plague for Counter-Strike [![Version](https://img.shields.io/badge/version-4.4-orange)]()
 
 <div align="center">
+
 **English** | [Русский](README.ru.md)
+
 </div>
 
 <div align="center">
+  
   <img src="https://media.moddb.com/images/mods/1/15/14594/99749503.gif" alt="Zombie Plague Mod">
+  
 </div>
 
 [![GitHub](https://img.shields.io/badge/github-ReHLDS-blue?logo=github)](https://github.com/rehlds/rehlds)
@@ -87,6 +91,24 @@ You can flexibly adjust the mod to fit your gameplay style:
 <summary><b>Click to expand full changelog (Version 4.3 → 3.55)</b></summary>
 
 <br>
+
+> **Version: 4.4** (Apr 09, 2026)
+> * **[CRITICAL] Weapon buy exploit fix** - added g_canbuy[] variable and check to prevent weapon purchase exploit
+> * **[CRITICAL] trigger_hurt forward fix** - fixed forward for trigger_hurt
+> * Added constant `MAX_PLAYERS_ZP = 33`
+> * Added `zp_` prefix to avoid name conflicts with other plugins
+> * Fixed function names `zp_fm_cs_*` → `zp_fm_*`
+> * Fixed function names `zp_cs_*` → `zp_*`
+> * **[BUGFIX] Glow removal** - added glow effect removal on disconnect
+> * **[BUGFIX] respawn_as_zombie flag** - fixed flag reset on spawn block
+> * **[BUGFIX] PODBots NVG** - added check for bots
+> * **[BUGFIX] Infection Bomb** - added g_bitEntity validation
+> * **[BUGFIX] Zombie respawn sound** - added sound on respawn
+> * **[OPTIMIZATION] WEAPONENTNAMES_SIZE** - added check for RegisterHam loop
+> * Fixed compilation errors with const for arrays
+> * Fixed MAX_PLAYERS constant duplicates
+> * Lang file verified - compatible
+> * Additional plugins verified - no changes needed
 
 > **Version: 4.3 Fix 5a** (Jul 04, 2011)
 > * Fixed menus causing runtime errors
